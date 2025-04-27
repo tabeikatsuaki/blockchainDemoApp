@@ -8,7 +8,7 @@ describe("MyToken contract", () => {
     // MyTokenをデプロイ
     const myToken = await ethers.deployContract("MyToken");
     // balanceOf関数を呼び出しOwnerのトークン量を取得
-    const ownerBalance = await myToken.balanceOf(owner.address);
+    const ownerBalance = await myToken.balanceOf(owner!.address);
 
     // Ownerのトークン量がこのコントラクトの全供給量に一致するか確認
     expect(await myToken.totalSupply()).to.equal(ownerBalance);

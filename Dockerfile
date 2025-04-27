@@ -11,4 +11,6 @@ COPY tsconfig.json ./
 
 RUN npm install
 
-# CMD ["npm", "run", "test"]
+EXPOSE 8545
+
+CMD ["npm", "run", "node"]
